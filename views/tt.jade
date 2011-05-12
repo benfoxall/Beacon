@@ -1,0 +1,19 @@
+h1 Time Tracer
+
+h2 Profile js functions across multiple browsers
+
+h3 #1 Choose a key
+
+p
+    input(type='text',id='key')
+    small (will be visible to your users)
+
+
+h3 #2 Add tracking code to your javascript
+
+code!= 'window.__t=function(d){var b=[["a",0],["b",10,30],["c",20,25]],e="http://localhost:3000/tt/"+d+"?";return function(){var c=[];for(t in b)c[t]=b[t].join(",");console.log(e+c.join(";"))}}("<span class="k"></span>");'
+
+h3 #3 View 
+
+a(href="#",class="keylink") -----> /tt/
+    span(class="k") 

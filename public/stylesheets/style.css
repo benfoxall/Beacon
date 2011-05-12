@@ -1,8 +1,28 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 5px;
+  font: 13px Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+a.unimplemented{
+    color:#ccc;
+    cursor: default;
+}
+a.unimplemented:hover:after{
+    content:' (Not Implemented)';
+    color:#f08;
+    font-size:.8em;
+}
+input{
+    border:1px solid #ddd;
+    font-size:1em;
+}
+code{
+    color:#aaa;
+}
+code .k{
+    color:#f08;
+    font-weight:bold;
 }

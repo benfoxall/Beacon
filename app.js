@@ -1,3 +1,12 @@
+var http = require('http'),
+    faye = require('faye'),
+    fs = require('fs');
+
+var bayeux = new faye.NodeAdapter({
+  mount:    '/faye',
+  timeout:  10
+});
+
 
 /**
  * Module dependencies.
@@ -34,7 +43,33 @@ app.get('/', function(req, res){
   });
 });
 
+
+app.get('/tt', function(req, res){
+  res.render('tt');
+});
+
+
+app.get('/tt/:key.png', function(req, res){    
+	fs.readFile('public/images/cat.png', function (err, data) {
+    	if (err) throw err;
+    	res.end(data);
+  	});
+  	
+  	bayeux.getClient().publish('/' + req.params.key, {
+          text:       'New email has arrived!',
+          inboxSize:  34
+    });
+    
+
+});
+
+app.get('/tt/:key', function(req, res){
+  res.render('tt_key', req.params);
+});
+
 // Only listen on $ node app.js
+
+bayeux.attach(app);
 
 if (!module.parent) {
   app.listen(3000);

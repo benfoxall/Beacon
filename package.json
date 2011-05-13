@@ -1,0 +1,16 @@
+{
+  "name": "Beacon",
+  "description": "Live reporting using websockets",
+  "version": "0.0.0",
+  "repository": "git://github.com/benfoxall/Beacon.git",
+  "author": "Ben Foxall <benfoxall@gmail.com> (bfoxall.com)",
+  "directories": {
+    "lib": "."
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies":{
+	  "faye": ">=0.5.5"
+  }
+}

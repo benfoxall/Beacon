@@ -67,11 +67,7 @@ app.get('/tt/:key', function(req, res){
   res.render('tt_key', req.params);
 });
 
-// Only listen on $ node app.js
-
 bayeux.attach(app);
 
-if (!module.parent) {
-  app.listen(3000);
-  console.log("Express server listening on port %d", app.address().port);
-}
+app.listen(3000);
+console.log("Express server listening on port %d", app.address().port);

@@ -11,6 +11,7 @@
     "node": "*"
   },
   "dependencies":{
-	  "faye": ">=0.5.5"
+	  "faye": "0.5.5",
+	  "express": "2.3.4"
   }
 }

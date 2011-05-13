@@ -12,6 +12,7 @@
   },
   "dependencies":{
 	  "faye": "0.5.5",
-	  "express": "2.3.4"
+	  "express": "2.3.4",
+	  "jade": "0.10.7"
   }
 }

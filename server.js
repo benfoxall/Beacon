@@ -56,8 +56,7 @@ app.get('/tt/:key.png', function(req, res){
   	});
   	
   	bayeux.getClient().publish('/' + req.params.key, {
-          text:       'New email has arrived!',
-          inboxSize:  34
+          text:'Message!'
     });
     
 

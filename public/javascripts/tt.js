@@ -13,7 +13,6 @@ $(function(){
         var client = new Faye.Client('http://'+host+'/faye');
         client.subscribe('/' + ttKey, function(message) {
             $('#tt').append($('<li>').text(message.text))
-            alert('Got a message: ' + message.text);
         });
     }
 })
